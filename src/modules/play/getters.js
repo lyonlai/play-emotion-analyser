@@ -17,7 +17,7 @@ export const scenesForCurrentAct = [
   currentAct,
   (actsForPlay, currentActId) =>
     currentActId
-      ? actsForPlay.getIn([currentActId, 'scenes'])
+      ? actsForPlay.getIn([currentActId, 'scenes']) || I({})
       : I({})
 ];
 
@@ -26,7 +26,7 @@ export const speechesForCurrentScene = [
   currentScene,
   (scenes, current) =>
     current
-      ? scenes.getIn([current, 'speeches'])
+      ? scenes.getIn([current, 'speeches']) || I({})
       : I({})
 ]
 
@@ -43,7 +43,7 @@ export const selectedSpeechForCurrentScene = [
   currentSpeech,
   (speeches, current) =>
     current
-      ? speeches.get(current)
+      ? speeches.get(current) || I({})
       : I({})
 ];
 
@@ -57,7 +57,7 @@ export const currentActTitle = [
   currentAct,
   (actsForPlay, currentActId) =>
     currentActId
-      ? actsForPlay.getIn([currentActId, 'title'])
+      ? actsForPlay.getIn([currentActId, 'title']) || ''
       : ''
 ]
 
