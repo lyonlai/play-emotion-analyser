@@ -10,6 +10,8 @@ import Speech from './speech';
 
 import Radium from 'radium';
 
+import Progress from './progress';
+
 export default Radium(React.createClass({
 
   mixins: [Reactor.ReactMixin],
@@ -65,6 +67,7 @@ export default Radium(React.createClass({
              onClick={this._nextSpeech}>
           <span style={ style.navigator.nextText}>&gt;</span>
         </div>
+        <Progress />
       </div>
     );
   }
