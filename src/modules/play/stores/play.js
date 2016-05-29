@@ -5,7 +5,12 @@ export default new Store({
 
   getInitialState() {
     return I({
-      acts: {}
+      acts: {},
+      ui: {
+        act: null,
+        scene: null,
+        speech: null
+      }
     });
   },
 
