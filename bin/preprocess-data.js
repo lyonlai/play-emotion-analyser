@@ -161,10 +161,11 @@ promise = requestsToMake.groupBy((request, index) => Math.floor(index /200))
             const speechId = reqToMake.speechId;
             return emotionAnalyser.analyseEmotion(reqToMake.analysibleText)
               .then(response => {
+                console.log(`got resposne for act : ${actId}, sceneId: ${sceneId}, speechId: ${speechId}`, response);
                 result = result.setIn([actId, 'scenes', sceneId, 'speeches', speechId, 'emotions'], response.docEmotions)
               })
               .catch(err => {
-                console.log(`error happened for act ${actId}, scene: ${sceneId}, speech: ${speechId}`)
+                console.error(`error happened for act ${actId}, scene: ${sceneId}, speech: ${speechId}`)
               });
           }).toArray()))
       .then(() => Bluebird.delay(300))
