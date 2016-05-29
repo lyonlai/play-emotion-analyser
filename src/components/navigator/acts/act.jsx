@@ -9,10 +9,16 @@ import PlayModule from 'modules/play';
 
 import Radium from 'radium';
 
+import Reactor from 'reactor';
+
 export default Radium(React.createClass({
 
   _onClick() {
-    PlayModule.actions.setCurrentAct(this.props.act.get('id'));
+    const currentAct = Reactor.evaluate(PlayModule.getters.currentAct);
+    if (currentAct !== this.props.act.get('id')) {
+      PlayModule.actions.setCurrentAct(this.props.act.get('id'));
+      PlayModule.actions.setCurrentScene();
+    }
     PlayModule.actions.hideAct();
   },
 
