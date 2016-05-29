@@ -1,6 +1,11 @@
 export default {
   container: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    overflow: 'scroll'
+  },
+  innerContainer: {
+    display: 'flex',
+    flexDirection: 'row',
   }
 }

@@ -13,9 +13,11 @@ export default React.createClass({
   render() {
     return (
       <div style={ style.container }>
-        <Navigator />
-        <Speech />
-        <Graph />
+        <div style={ style.innerContainer }>
+          <Navigator />
+          <Speech />
+          <Graph />
+        </div>
       </div>
     );
   }

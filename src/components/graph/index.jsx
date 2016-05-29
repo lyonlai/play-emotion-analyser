@@ -6,6 +6,8 @@ import Reactor from 'reactor';
 
 import PlayModule from 'modules/play';
 
+import style from './style';
+
 const colors = {
   anger: '#E80521',
   disgust: '#592684',
@@ -78,7 +80,7 @@ export default React.createClass({
     };
 
     return (
-      <div>
+      <div style={style.container}>
         <HighCharts config={config} />
       </div>
     )
