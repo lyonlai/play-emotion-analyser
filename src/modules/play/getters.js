@@ -19,5 +19,14 @@ export const scenesForCurrentAct = [
     currentActId
       ? actsForPlay.getIn([currentActId, 'scenes'])
       : I({})
+];
+
+export const currentActTitle = [
+  acts,
+  currentAct,
+  (actsForPlay, currentActId) =>
+    currentActId
+      ? actsForPlay.getIn([currentActId, 'title'])
+      : ''
 ]
 

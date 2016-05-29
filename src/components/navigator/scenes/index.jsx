@@ -8,6 +8,8 @@ import Scene from './scene';
 
 import style from './styles';
 
+import Header from './header';
+
 export default React.createClass({
 
   mixins: [Reactor.ReactMixin],
@@ -22,6 +24,7 @@ export default React.createClass({
   render() {
     return (
       <div style={ style.container }>
+        <Header />
         {
           this.state.scenes.map((scene, id) =>
             <Scene scene={scene} key={id} isSelected={ scene.get('id') === this.state.currentScene } />
