@@ -43,6 +43,9 @@ module.exports = {
     root: path.join(__dirname, '/../src')
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"test"'
+    }),
     new BowerWebpackPlugin({
       searchResolveModulesDirectories: false
     })

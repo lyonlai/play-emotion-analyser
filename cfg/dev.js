@@ -15,8 +15,11 @@ let config = Object.assign({}, baseConfig, {
     './src/index'
   ],
   cache: true,
-  devtool: 'eval-source-map',
+  devtool: 'eval',
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"dev"'
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new BowerWebpackPlugin({

@@ -39,6 +39,7 @@
     "file-loader": "^0.8.4",
     "glob": "^7.0.0",
     "isparta-instrumenter-loader": "^1.0.0",
+    "json-loader": "^0.5.4",
     "karma": "^0.13.9",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^1.0.1",
@@ -66,6 +67,8 @@
     "normalize.css": "^4.0.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
-    "nuclear-js": "1.2.1"
+    "nuclear-js": "1.2.1",
+    "blueimp-md5": "2.3.0",
+    "number-converter": "1.2.1"
   }
 }
