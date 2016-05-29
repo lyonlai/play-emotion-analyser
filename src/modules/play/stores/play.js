@@ -18,6 +18,7 @@ export default new Store({
   initialize() {
     this.on(actionTypes.LOAD_PLAY, this._loadPlay);
     this.on(actionTypes.SET_CURRENT_ACT, this._setCurrentAct);
+    this.on(actionTypes.SET_CURRENT_SCENE, this._setCurrentScene);
     this.on(actionTypes.SHOW_ACT, this._showAct);
     this.on(actionTypes.HIDE_ACT, this._hideAct);
   },
@@ -28,6 +29,10 @@ export default new Store({
 
   _setCurrentAct(state, { actId }) {
     return state.setIn(['ui', 'act'], actId);;
+  },
+
+  _setCurrentScene(state, { sceneId }) {
+    return state.setIn(['ui', 'scene'], sceneId);;
   },
 
   _showAct(state) {

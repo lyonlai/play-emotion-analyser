@@ -9,6 +9,10 @@ export function setCurrentAct(actId) {
   Reactor.dispatch(actionTypes.SET_CURRENT_ACT, { actId });
 }
 
+export function setCurrentScene(sceneId) {
+  Reactor.dispatch(actionTypes.SET_CURRENT_SCENE, { sceneId });
+}
+
 export function showAct() {
   Reactor.dispatch(actionTypes.SHOW_ACT);
 }
