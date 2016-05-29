@@ -19,6 +19,7 @@ export default new Store({
     this.on(actionTypes.LOAD_PLAY, this._loadPlay);
     this.on(actionTypes.SET_CURRENT_ACT, this._setCurrentAct);
     this.on(actionTypes.SET_CURRENT_SCENE, this._setCurrentScene);
+    this.on(actionTypes.SET_CURRENT_SPEECH, this._setCurrentSpeech);
     this.on(actionTypes.SHOW_ACT, this._showAct);
     this.on(actionTypes.HIDE_ACT, this._hideAct);
   },
@@ -41,6 +42,10 @@ export default new Store({
 
   _hideAct(state) {
     return state.setIn(['ui', 'showingAct'], false);;
+  },
+
+  _setCurrentSpeech(state, { speechId }) {
+    return state.setIn(['ui', 'speech'], speechId);;
   }
 
 });

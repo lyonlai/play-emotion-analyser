@@ -21,6 +21,23 @@ export const scenesForCurrentAct = [
       : I({})
 ];
 
+export const speechesForCurrentScene = [
+  scenesForCurrentAct,
+  currentScene,
+  (scenes, current) =>
+    current
+      ? scenes.getIn([current, 'speeches'])
+      : I({})
+]
+
+export const lastSpeechIdForCurrentScene = [
+  speechesForCurrentScene,
+  speeches => speeches
+    .map(speech => Number(speech.get('id')))
+    .sort()
+    .last()
+];
+
 export const currentActTitle = [
   acts,
   currentAct,

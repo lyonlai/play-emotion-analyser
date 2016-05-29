@@ -13,6 +13,10 @@ export function setCurrentScene(sceneId) {
   Reactor.dispatch(actionTypes.SET_CURRENT_SCENE, { sceneId });
 }
 
+export function setCurrentSpeech(speechId) {
+  Reactor.dispatch(actionTypes.SET_CURRENT_SPEECH, { speechId });
+}
+
 export function showAct() {
   Reactor.dispatch(actionTypes.SHOW_ACT);
 }

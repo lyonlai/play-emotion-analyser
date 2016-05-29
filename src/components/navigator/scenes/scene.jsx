@@ -9,10 +9,18 @@ import PlayModule from 'modules/play';
 
 import Radium from 'radium';
 
+import Reactor from 'reactor';
+
 export default Radium(React.createClass({
 
   _onClick() {
-    PlayModule.actions.setCurrentScene(this.props.scene.get('id'));
+    const currentScene = Reactor.evaluate(PlayModule.getters.currentScene);
+    const sceneId = this.props.scene.get('id');
+    if (currentScene != sceneId) {
+      PlayModule.actions.setCurrentScene(sceneId);
+      PlayModule.actions.setCurrentSpeech('1');
+    }
+
   },
 
   render() {
