@@ -54,6 +54,9 @@ export default Radium(React.createClass({
              onClick={this._previousSpeech} >
           <span style={ style.navigator.previousText}>&lt;</span>
         </div>
+        <div style={ [style.progressIndicator, !currentSpeech && style.hide]} >
+         {currentSpeech} / {lastSpeechId}
+        </div>
         <div style={ [style.innerContainer, computedStyle] }>
 
           {

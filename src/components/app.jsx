@@ -4,6 +4,8 @@ import Navigator from './navigator';
 
 import Speech from './speeches';
 
+import Graph from './graph';
+
 import style from './style';
 
 export default React.createClass({
@@ -13,6 +15,7 @@ export default React.createClass({
       <div style={ style.container }>
         <Navigator />
         <Speech />
+        <Graph />
       </div>
     );
   }

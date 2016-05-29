@@ -38,6 +38,20 @@ export const lastSpeechIdForCurrentScene = [
     .last()
 ];
 
+export const selectedSpeechForCurrentScene = [
+  speechesForCurrentScene,
+  currentSpeech,
+  (speeches, current) =>
+    current
+      ? speeches.get(current)
+      : I({})
+];
+
+export const emotionForSelectedSpeech = [
+  selectedSpeechForCurrentScene,
+  speech => (speech && speech.get('emotions')) || I({})
+];
+
 export const currentActTitle = [
   acts,
   currentAct,

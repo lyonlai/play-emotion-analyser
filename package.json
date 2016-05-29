@@ -75,6 +75,6 @@
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "superagent": "1.8.3",
-    "react-d3": "0.4.0"
+    "react-highcharts": "8.3.2"
   }
 }

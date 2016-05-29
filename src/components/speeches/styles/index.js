@@ -17,6 +17,17 @@ export default {
     transition: 'transform 0.3s ease-in-out',
     transform: 'translateX(0px)'
   },
+  progressIndicator: {
+    position: 'absolute',
+    width: '500px',
+    height: '30px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    top: '0px',
+    left: '0px',
+    zIndex: '10'
+  },
   navigator: {
     next: {
       position: 'absolute',
