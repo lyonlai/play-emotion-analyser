@@ -1,3 +1,4 @@
 export default {
-  LOAD_PLAY: 'LOAD_PLAY'
+  LOAD_PLAY: 'LOAD_PLAY',
+  SET_CURRENT_ACT: 'SET_CURRENT_ACT'
 };

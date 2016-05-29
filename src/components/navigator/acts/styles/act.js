@@ -7,5 +7,9 @@ export default {
     paddingLeft: '20px',
     borderBottom: '1px solid #81DEFC',
     cursor: 'pointer'
+  },
+  selected: {
+    color: 'white',
+    backgroundColor: '#81DEFC'
   }
 }
