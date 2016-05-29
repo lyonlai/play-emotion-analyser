@@ -1,7 +1,7 @@
 import React from 'react';
 import { NumberConverter } from 'number-converter';
 
-import style from './styles/act';
+import style from './styles/scene';
 
 const numberConverter = new NumberConverter(NumberConverter.DECIMAL, NumberConverter.ROMAN_NUMERAL);
 
@@ -12,18 +12,18 @@ import Radium from 'radium';
 export default Radium(React.createClass({
 
   _onClick() {
-    PlayModule.actions.setCurrentAct(this.props.act.get('id'));
-    PlayModule.actions.hideAct();
+    PlayModule.actions.setCurrentScene(this.props.scene.get('id'));
   },
 
   render() {
-    const id = this.props.act.get('id');
+    const id = this.props.scene.get('id');
+    const title = this.props.scene.get('title');
     const isSelected = this.props.isSelected;
 
     return (
       <div style={ [style.item, isSelected && style.selected] }
            onClick={ this._onClick }>
-        { `ACT ${numberConverter.convert(id)}` }
+        { `Scene ${numberConverter.convert(id)}: ${title}` }
       </div>
     )
   }

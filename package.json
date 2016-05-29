@@ -71,6 +71,7 @@
     "normalize.css": "^4.0.0",
     "nuclear-js": "1.2.1",
     "number-converter": "1.2.1",
+    "radium": "^0.17.1",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "superagent": "1.8.3"
