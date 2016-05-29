@@ -24,7 +24,7 @@ class DataPreprocessor {
       const analysedResult = this.analyseLine(line);
 
       if (analysedResult.isAct) {
-        lastActNumber = analysedResult.actNumber;
+        lastActNumber = `${analysedResult.actNumber}`;
         return result.set(lastActNumber, I({
           scenes: {},
           id: lastActNumber,
@@ -33,9 +33,9 @@ class DataPreprocessor {
       }
 
       if (analysedResult.isScene) {
-        lastSceneNumber = analysedResult.sceneNumber;
+        lastSceneNumber = `${analysedResult.sceneNumber}`;
 
-        lastSpeechNumber = 1;
+        lastSpeechNumber = '1';
 
         return result.setIn([lastActNumber, 'scenes', lastSceneNumber], I({
           title: analysedResult.sceneTitle,
@@ -66,7 +66,7 @@ class DataPreprocessor {
             );
         }
       } else {
-        lastSpeechNumber = line.speech_number;
+        lastSpeechNumber = `${line.speech_number}`;
         const speechBegun = result.hasIn([lastActNumber, 'scenes', lastSceneNumber, 'speeches', lastSpeechNumber]);
         if (!speechBegun) {
           return result
@@ -86,6 +86,15 @@ class DataPreprocessor {
         } else {
           return result
             .setIn([lastActNumber, 'scenes', lastSceneNumber, 'speeches', lastSpeechNumber, 'speaker'], line.speaker)
+            .updateIn([lastActNumber, 'scenes', lastSceneNumber, 'speakerIndexes'], speakerIndexes =>
+              speakerIndexes.has(line.speaker)
+                ? speakerIndexes.update(line.speaker, indexes =>
+                    indexes.includes(lastSpeechNumber)
+                      ? indexes
+                      : indexes.push(lastSpeechNumber)
+                  )
+                : speakerIndexes.set(line.speaker, I([lastSpeechNumber]))
+            )
             .updateIn([lastActNumber, 'scenes', lastSceneNumber, 'speeches', lastSpeechNumber, 'analysableText'],
               content => `${content}${text}`)
             .updateIn([lastActNumber, 'scenes', lastSceneNumber, 'speeches', lastSpeechNumber, 'displayableContent'],
