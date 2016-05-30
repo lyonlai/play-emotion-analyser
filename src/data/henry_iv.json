@@ -5,19 +5,19 @@
         "title": "London. The palace.",
         "id": "1",
         "speakerIndexes": {
-          "WESTMORELAND": [
-            "2",
-            "4",
-            "6",
-            "8",
-            "10"
-          ],
           "KING HENRY IV": [
             "1",
             "3",
             "5",
             "7",
             "9"
+          ],
+          "WESTMORELAND": [
+            "2",
+            "4",
+            "6",
+            "8",
+            "10"
           ]
         },
         "speeches": {
@@ -227,6 +227,31 @@
         "title": "London. An apartment of the Prince's.",
         "id": "2",
         "speakerIndexes": {
+          "FALSTAFF": [
+            "1",
+            "3",
+            "5",
+            "7",
+            "9",
+            "11",
+            "13",
+            "15",
+            "17",
+            "19",
+            "21",
+            "23",
+            "25",
+            "27",
+            "29",
+            "31",
+            "33",
+            "40",
+            "42",
+            "44",
+            "46",
+            "48",
+            "51"
+          ],
           "PRINCE HENRY": [
             "2",
             "4",
@@ -257,31 +282,6 @@
             "58",
             "60",
             "62"
-          ],
-          "FALSTAFF": [
-            "1",
-            "3",
-            "5",
-            "7",
-            "9",
-            "11",
-            "13",
-            "15",
-            "17",
-            "19",
-            "21",
-            "23",
-            "25",
-            "27",
-            "29",
-            "31",
-            "33",
-            "40",
-            "42",
-            "44",
-            "46",
-            "48",
-            "51"
           ],
           "POINS": [
             "35",
@@ -1511,6 +1511,12 @@
         "title": "London. The palace.",
         "id": "3",
         "speakerIndexes": {
+          "KING HENRY IV": [
+            "1",
+            "4",
+            "8",
+            "10"
+          ],
           "EARL OF WORCESTER": [
             "2",
             "15",
@@ -1541,12 +1547,6 @@
             "38",
             "46",
             "53"
-          ],
-          "KING HENRY IV": [
-            "1",
-            "4",
-            "8",
-            "10"
           ],
           "HOTSPUR": [
             "6",
@@ -2660,9 +2660,6 @@
         "title": "Rochester. An inn yard.",
         "id": "1",
         "speakerIndexes": {
-          "Ostler": [
-            "2"
-          ],
           "First Carrier": [
             "1",
             "3",
@@ -2672,6 +2669,9 @@
             "11",
             "13",
             "15"
+          ],
+          "Ostler": [
+            "2"
           ],
           "Second Carrier": [
             "4",
@@ -4322,16 +4322,6 @@
         "title": "Warkworth castle",
         "id": "3",
         "speakerIndexes": {
-          "LADY PERCY": [
-            "2",
-            "10",
-            "12",
-            "14",
-            "16",
-            "18",
-            "20",
-            "22"
-          ],
           "HOTSPUR": [
             "1",
             "3",
@@ -4344,6 +4334,16 @@
             "17",
             "19",
             "21"
+          ],
+          "LADY PERCY": [
+            "2",
+            "10",
+            "12",
+            "14",
+            "16",
+            "18",
+            "20",
+            "22"
           ],
           "Servant": [
             "4",
@@ -8929,6 +8929,21 @@
         "title": "Bangor. The Archdeacon's house.",
         "id": "1",
         "speakerIndexes": {
+          "MORTIMER": [
+            "1",
+            "13",
+            "18",
+            "22",
+            "26",
+            "40",
+            "42",
+            "45",
+            "47",
+            "49",
+            "51",
+            "53",
+            "74"
+          ],
           "HOTSPUR": [
             "2",
             "4",
@@ -8983,21 +8998,6 @@
             "52",
             "54",
             "73"
-          ],
-          "MORTIMER": [
-            "1",
-            "13",
-            "18",
-            "22",
-            "26",
-            "40",
-            "42",
-            "45",
-            "47",
-            "49",
-            "51",
-            "53",
-            "74"
           ],
           "EARL OF WORCESTER": [
             "27",
@@ -10480,6 +10480,13 @@
         "title": "London. The palace.",
         "id": "2",
         "speakerIndexes": {
+          "KING HENRY IV": [
+            "1",
+            "3",
+            "5",
+            "7",
+            "9"
+          ],
           "PRINCE HENRY": [
             "2",
             "4",
@@ -10501,13 +10508,6 @@
             "76",
             "78",
             "80"
-          ],
-          "KING HENRY IV": [
-            "1",
-            "3",
-            "5",
-            "7",
-            "9"
           ],
           "SIR WALTER BLUNT": [
             "8"
@@ -12206,13 +12206,6 @@
         "title": "The rebel camp near Shrewsbury.",
         "id": "1",
         "speakerIndexes": {
-          "EARL OF DOUGLAS": [
-            "2",
-            "15",
-            "19",
-            "28",
-            "33"
-          ],
           "HOTSPUR": [
             "1",
             "3",
@@ -12228,6 +12221,13 @@
             "26",
             "30",
             "32"
+          ],
+          "EARL OF DOUGLAS": [
+            "2",
+            "15",
+            "19",
+            "28",
+            "33"
           ],
           "Messenger": [
             "4",
@@ -12911,11 +12911,6 @@
         "title": "A public road near Coventry.",
         "id": "2",
         "speakerIndexes": {
-          "BARDOLPH": [
-            "2",
-            "4",
-            "6"
-          ],
           "FALSTAFF": [
             "1",
             "3",
@@ -12928,6 +12923,11 @@
             "17",
             "19",
             "21"
+          ],
+          "BARDOLPH": [
+            "2",
+            "4",
+            "6"
           ],
           "PRINCE HENRY": [
             "8",
@@ -13360,6 +13360,18 @@
         "title": "The rebel camp near Shrewsbury.",
         "id": "3",
         "speakerIndexes": {
+          "HOTSPUR": [
+            "1",
+            "5",
+            "7",
+            "14",
+            "16",
+            "19",
+            "21",
+            "23",
+            "25",
+            "27"
+          ],
           "EARL OF WORCESTER": [
             "2",
             "8",
@@ -13377,18 +13389,6 @@
             "11",
             "13",
             "15"
-          ],
-          "HOTSPUR": [
-            "1",
-            "5",
-            "7",
-            "14",
-            "16",
-            "19",
-            "21",
-            "23",
-            "25",
-            "27"
           ],
           "SIR WALTER BLUNT": [
             "18",
@@ -13958,18 +13958,18 @@
         "title": "York. The ARCHBISHOP'S palace.",
         "id": "4",
         "speakerIndexes": {
-          "SIR MICHAEL": [
-            "2",
-            "4",
-            "6",
-            "8"
-          ],
           "ARCHBISHOP OF YORK": [
             "1",
             "3",
             "5",
             "7",
             "9"
+          ],
+          "SIR MICHAEL": [
+            "2",
+            "4",
+            "6",
+            "8"
           ]
         },
         "speeches": {
@@ -14166,14 +14166,6 @@
         "title": "KING HENRY IV's camp near Shrewsbury.",
         "id": "1",
         "speakerIndexes": {
-          "PRINCE HENRY": [
-            "2",
-            "7",
-            "10",
-            "12",
-            "15",
-            "17"
-          ],
           "KING HENRY IV": [
             "1",
             "3",
@@ -14181,6 +14173,14 @@
             "9",
             "11",
             "13"
+          ],
+          "PRINCE HENRY": [
+            "2",
+            "7",
+            "10",
+            "12",
+            "15",
+            "17"
           ],
           "EARL OF WORCESTER": [
             "4",
@@ -14582,11 +14582,6 @@
         "title": "The rebel camp.",
         "id": "2",
         "speakerIndexes": {
-          "VERNON": [
-            "2",
-            "4",
-            "16"
-          ],
           "EARL OF WORCESTER": [
             "1",
             "3",
@@ -14594,6 +14589,11 @@
             "10",
             "12",
             "14"
+          ],
+          "VERNON": [
+            "2",
+            "4",
+            "16"
           ],
           "HOTSPUR": [
             "5",
@@ -15055,6 +15055,11 @@
         "title": "Plain between the camps.",
         "id": "3",
         "speakerIndexes": {
+          "SIR WALTER BLUNT": [
+            "1",
+            "3",
+            "5"
+          ],
           "EARL OF DOUGLAS": [
             "2",
             "4",
@@ -15062,11 +15067,6 @@
             "9",
             "11",
             "13"
-          ],
-          "SIR WALTER BLUNT": [
-            "1",
-            "3",
-            "5"
           ],
           "HOTSPUR": [
             "6",
@@ -15573,6 +15573,14 @@
         "title": "Another part of the field.",
         "id": "4",
         "speakerIndexes": {
+          "KING HENRY IV": [
+            "1",
+            "4",
+            "9",
+            "12",
+            "15",
+            "17"
+          ],
           "LANCASTER": [
             "2",
             "7",
@@ -15594,14 +15602,6 @@
             "31",
             "33",
             "36"
-          ],
-          "KING HENRY IV": [
-            "1",
-            "4",
-            "9",
-            "12",
-            "15",
-            "17"
           ],
           "WESTMORELAND": [
             "5"
@@ -16450,14 +16450,14 @@
         "title": "Another part of the field.",
         "id": "5",
         "speakerIndexes": {
-          "EARL OF WORCESTER": [
-            "2"
-          ],
           "KING HENRY IV": [
             "1",
             "3",
             "5",
             "8"
+          ],
+          "EARL OF WORCESTER": [
+            "2"
           ],
           "PRINCE HENRY": [
             "4",
