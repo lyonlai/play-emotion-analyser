@@ -54,9 +54,16 @@ describe('Component: App', () => {
         const scenes = act.get('scenes').toList();
         app.find('.navigator .acts .act').at(index).simulate('click');
         app.find('.navigator .scenes .scene').forEach((sceneEl, index) => {
-          const speeches = scenes.getIn([index, 'speeches']);
+          const speeches = scenes.getIn([index, 'speeches'])
+            .sortBy(speech => Number(speech.get('id')))
+            .toList();
           sceneEl.simulate('click');
           app.find('.speeches .speech').length.should.equal(speeches.size);
+          app.find('.speeches .speech')
+            .map(el => el.node.innerText)
+            .forEach((txt, index) => {
+              speeches.getIn([index, 'displayableContent']).forEach(content => txt.should.include(content.get('text')));
+            })
         });
       });
     });
