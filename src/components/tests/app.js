@@ -83,7 +83,22 @@ describe('Component: App', () => {
       app.find('.speeches .container').get(0).style.transform.should.equal('translateX(-600px)');
       app.find('.speeches .previous').simulate('click');
       app.find('.speeches .container').get(0).style.transform.should.equal('translateX(0px)');
+    });
 
+    it('trace player should be working as expected', () => {
+      app.find('.navigator .acts .act').first().simulate('click');
+      app.find('.navigator .scenes .scene').first().simulate('click');
+      app.find('.speeches .speaker-select').simulate('change', { target: { value: 'WESTMORELAND' }});
+      app.find('.speeches .container').get(0).style.transform.should.equal('translateX(-600px)');
+      app.find('.speeches .next').simulate('click');
+      app.find('.speeches .container').get(0).style.transform.should.equal('translateX(-1800px)');
+      app.find('.speeches .previous').simulate('click');
+      app.find('.speeches .container').get(0).style.transform.should.equal('translateX(-600px)');
+      app.find('.speeches .speaker-select').simulate('change', { target: { value: '' }});
+      app.find('.speeches .next').simulate('click');
+      app.find('.speeches .container').get(0).style.transform.should.equal('translateX(-1200px)');
+      app.find('.speeches .previous').simulate('click');
+      app.find('.speeches .container').get(0).style.transform.should.equal('translateX(-600px)');
     });
 
   });

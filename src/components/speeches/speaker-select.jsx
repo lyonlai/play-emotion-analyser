@@ -40,7 +40,8 @@ export default React.createClass({
     const speaker = this.state.tracedSpeaker;
 
     return (
-      <select value={speaker || ''}
+      <select className='speaker-select'
+              value={speaker || ''}
               onChange={ this._onChange }
               style={ style.select }>
         <option value=''>Choose speaker to trace</option>
