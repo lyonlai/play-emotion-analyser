@@ -88,7 +88,7 @@ export const tracedSpeakerIndexes = [
   tracedSpeaker,
   (indexes, speaker) =>
     speaker
-      ? indexes.get(speaker).sortBy(index => Number(index)) || I([])
+      ? (indexes.get(speaker) || I([])).sortBy(index => Number(index)) || I([])
       : I([])
 ];
 
