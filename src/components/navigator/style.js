@@ -1,10 +1,10 @@
 export default {
   container: {
     width: '300px',
-    height: '500px',
+    height: '600px',
     overflowX: 'hidden',
     overflowY: 'scroll',
-    border: '1px solid #81DEFC',
+    border: '1px solid #d3d3d3',
     display: 'flex',
     position: 'relative'
   },

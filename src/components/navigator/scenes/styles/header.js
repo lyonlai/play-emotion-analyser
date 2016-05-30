@@ -22,6 +22,6 @@ export default {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    borderBottom: '1px solid #81DEFC'
+    borderBottom: '1px solid #d3d3d3'
   }
 }

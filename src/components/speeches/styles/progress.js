@@ -2,7 +2,7 @@ export default {
 
   container: {
     position: 'absolute',
-    top: '498px',
+    bottom: '0px',
     height: '2px',
     width: '500px'
   },

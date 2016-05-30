@@ -5,7 +5,7 @@ export default {
     justifyContent: 'flex-start',
     alignItems: 'center',
     paddingLeft: '20px',
-    borderBottom: '1px solid #81DEFC',
+    borderBottom: '1px solid #d3d3d3',
     cursor: 'pointer'
   },
   selected: {

@@ -1,12 +1,12 @@
 export default {
   container: {
     width: '500px',
-    height: '500px',
+    height: '600px',
     overflowX: 'hidden',
     overflowY: 'scroll',
-    borderRight: '1px solid #81DEFC',
-    borderTop: '1px solid #81DEFC',
-    borderBottom: '1px solid #81DEFC',
+    borderRight: '1px solid #d3d3d3',
+    borderTop: '1px solid #d3d3d3',
+    borderBottom: '1px solid #d3d3d3',
     display: 'flex',
     position: 'relative'
   },
