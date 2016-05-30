@@ -19,6 +19,7 @@ export default Radium(React.createClass({
       PlayModule.actions.setCurrentAct(this.props.act.get('id'));
       PlayModule.actions.setCurrentScene();
       PlayModule.actions.setCurrentSpeech();
+      PlayModule.actions.traceSpeaker('');
     }
     PlayModule.actions.hideAct();
   },
