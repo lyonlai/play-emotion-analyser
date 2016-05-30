@@ -18,15 +18,16 @@ export default React.createClass({
   },
 
   _onChange(e) {
-    PlayModule.actions.traceSpeaker(e.target.value);
-    const speechIndexesForPlayer = Reactor.evaluate(PlayModule.getters.tracedSpeakerIndexes);
+    const selectedSpeaker = e.target.value;
+    PlayModule.actions.traceSpeaker(selectedSpeaker);
+    const speakerForCurrentScene = Reactor.evaluate(PlayModule.getters.speakerForCurrentScene);
 
-    if (speechIndexesForPlayer.isEmpty()) {
-      return;
+    if(speakerForCurrentScene !== selectedSpeaker && selectedSpeaker !== '') {
+      const speechIndexesForPlayer = Reactor.evaluate(PlayModule.getters.tracedSpeakerIndexes);
+      const firstSpeech = speechIndexesForPlayer.first();
+      PlayModule.actions.setCurrentSpeech(firstSpeech);
     }
 
-    const firstSpeech = speechIndexesForPlayer.first();
-    PlayModule.actions.setCurrentSpeech(firstSpeech);
   },
 
   render() {

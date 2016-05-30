@@ -52,6 +52,11 @@ export const selectedSpeechForCurrentScene = [
       : I({})
 ];
 
+export const speakerForCurrentScene = [
+  selectedSpeechForCurrentScene,
+  speech => (speech && speech.get('speaker')) || ''
+];
+
 export const emotionForSelectedSpeech = [
   selectedSpeechForCurrentScene,
   speech => (speech && speech.get('emotions')) || I({})
@@ -82,5 +87,17 @@ export const tracedSpeakerIndexes = [
   speakerIndexesForCurrentScene,
   tracedSpeaker,
   (indexes, speaker) =>
-    indexes.get(speaker).sortBy(index => Number(index)) || I({})
+    speaker
+      ? indexes.get(speaker).sortBy(index => Number(index)) || I([])
+      : I([])
+];
+
+export const firstSpeakerSpeech = [
+  tracedSpeakerIndexes,
+  indexes => indexes.first()
+];
+
+export const lastSpeakerSpeech = [
+  tracedSpeakerIndexes,
+  indexes => indexes.last()
 ];

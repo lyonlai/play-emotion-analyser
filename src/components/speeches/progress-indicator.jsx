@@ -15,7 +15,7 @@ export default Radium(React.createClass({
   getDataBindings() {
     return {
       currentSpeech: PlayModule.getters.currentSpeech,
-      lastSpeechId: PlayModule.getters.lastSpeechIdForCurrentScene,
+      lastSpeechId: PlayModule.getters.lastSpeechIdForCurrentScene
     };
   },
 

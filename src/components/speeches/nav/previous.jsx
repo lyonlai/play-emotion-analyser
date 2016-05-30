@@ -13,22 +13,38 @@ export default Radium(React.createClass({
 
   getDataBindings() {
     return {
-      currentSpeech: PlayModule.getters.currentSpeech
+      currentSpeech: PlayModule.getters.currentSpeech,
+      lastSpeech: PlayModule.getters.lastSpeechIdForCurrentScene,
+      tracedPlayer: PlayModule.getters.tracedSpeaker,
+      firstSpeakerSpeech: PlayModule.getters.firstSpeakerSpeech
     };
   },
 
   _previousSpeech() {
     const currentSpeech = Number(this.state.currentSpeech);
+    const tracedPlayer = this.state.tracedPlayer;
 
-    if (currentSpeech > 1) {
-      PlayModule.actions.setCurrentSpeech(`${currentSpeech - 1}`);
+    if (tracedPlayer) {
+      const firstSpeechForSpeaker = Number(this.state.firstSpeakerSpeech);
+
+      if(currentSpeech > firstSpeechForSpeaker) {
+        const speechIndexes = Reactor.evaluate(PlayModule.getters.tracedSpeakerIndexes);
+        const index = speechIndexes.indexOf(this.state.currentSpeech);
+        PlayModule.actions.setCurrentSpeech(`${speechIndexes.get(index - 1)}`);
+      }
+    } else {
+      if (currentSpeech > 1) {
+        PlayModule.actions.setCurrentSpeech(`${currentSpeech - 1}`);
+      }
     }
 
   },
 
   render() {
     const currentSpeech = Number(this.state.currentSpeech);
-    const isBeginning = currentSpeech === 1;
+    const tracedPlayer = this.state.tracedPlayer;
+    const firstSpeechForSpeaker = Number(this.state.firstSpeakerSpeech);
+    const isBeginning = currentSpeech === (tracedPlayer ? firstSpeechForSpeaker : 1);
 
     return (
       <div style={ [style.navigator.previous, (!this.state.currentSpeech || isBeginning) && style.hide ] }
