@@ -1,7 +1,7 @@
 export default {
   container: {
-    width: '500px',
-    height: '600px',
+    width: '600px',
+    height: '700px',
     overflowX: 'hidden',
     overflowY: 'scroll',
     borderRight: '1px solid #d3d3d3',
@@ -19,7 +19,7 @@ export default {
   },
   progressIndicator: {
     position: 'absolute',
-    width: '500px',
+    width: '600px',
     height: '30px',
     display: 'flex',
     justifyContent: 'center',
@@ -32,13 +32,13 @@ export default {
     next: {
       position: 'absolute',
       top: '0px',
-      left: '250px',
+      left: '300px',
       display: 'flex',
       justifyContent: 'flex-end',
       alignItems: 'center',
       opacity: '0.5',
-      width: '250px',
-      height: '500px',
+      width: '300px',
+      height: '700px',
       cursor: 'pointer',
       zIndex: '10'
     },
@@ -50,8 +50,8 @@ export default {
       justifyContent: 'flex-start',
       alignItems: 'center',
       opacity: '0.5',
-      width: '250px',
-      height: '500px',
+      width: '300px',
+      height: '700px',
       cursor: 'pointer',
       zIndex: '10'
     },

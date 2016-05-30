@@ -43,7 +43,7 @@ export default Radium(React.createClass({
 
   render() {
     const currentSpeech = Number(this.state.currentSpeech);
-    const computedStyle = currentSpeech ? { transform: `translateX(${(currentSpeech - 1) * -500}px)`} : {}
+    const computedStyle = currentSpeech ? { transform: `translateX(${(currentSpeech - 1) * - 600}px)`} : {}
     const lastSpeechId = Reactor.evaluate(PlayModule.getters.lastSpeechIdForCurrentScene);
     const currentSceneId = Reactor.evaluate(PlayModule.getters.currentScene);
     const currentAct = Reactor.evaluate(PlayModule.getters.currentAct);

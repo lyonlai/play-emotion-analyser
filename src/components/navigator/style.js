@@ -1,7 +1,7 @@
 export default {
   container: {
     width: '300px',
-    height: '600px',
+    height: '700px',
     overflowX: 'hidden',
     overflowY: 'scroll',
     border: '1px solid #d3d3d3',

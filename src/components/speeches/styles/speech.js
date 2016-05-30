@@ -1,6 +1,6 @@
 export default {
   container: {
-    width: '400px',
+    width: '500px',
     padding: '50px'
   },
   speech: {
