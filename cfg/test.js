@@ -1,6 +1,7 @@
 'use strict';
 
 let path = require('path');
+let webpack = require('webpack');
 let srcPath = path.join(__dirname, '/../src/');
 
 let baseConfig = require('./base');
@@ -35,6 +36,10 @@ module.exports = {
             path.join(__dirname, '/../loadtests.js')
           ]
         )
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
   },
