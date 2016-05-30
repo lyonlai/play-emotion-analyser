@@ -22,9 +22,11 @@ export default React.createClass({
 
   render() {
     return (
-      <div class='header'
+      <div className='header'
            style={style.container}>
-        <div style={ style.back } onClick={ this._onClick }>&lt;</div>
+        <div className='back'
+             style={ style.back }
+             onClick={ this._onClick }>&lt;</div>
         <div style={ style.title }>{ this.state.currentActTitle}</div>
       </div>
     );

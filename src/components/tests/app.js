@@ -34,6 +34,14 @@ describe('Component: App', () => {
       app.find('.navigator .acts .act').length.should.equal(5);
     });
 
+    it('click on act should show scene panel, clicking back btn should show act panel', () => {
+      app.find('.navigator .acts .act').first().simulate('click');
+      app.find('.navigator .container').get(0).style.transform.should.equal('translateX(-300px)');
+      app.find('.navigator .scenes .header .back').simulate('click');
+      app.find('.navigator .container').get(0).style.transform.should.equal('translateX(0px)');
+
+    });
+
     it('each act should have corresponding scenes', () => {
       const acts = Reactor.evaluate(PlayModule.getters.acts);
 

@@ -16,7 +16,8 @@ module.exports = function(config) {
     client: {
       mocha: {
         reporter: 'html', // change Karma's debug.html to the mocha web reporter
-        ui: 'bdd'
+        ui: 'bdd',
+        timeout: 5000
       }
     },
     singleRun: false,
