@@ -10,7 +10,8 @@ export default React.createClass({
     const key = `${act}.${scene}.${speech.get('id')}.`;
 
     return (
-      <div style={ styles.container }>
+      <div className='speech'
+           style={ styles.container }>
         {
           contents.map((content, index) => {
             const isLine = content.get('isLine');

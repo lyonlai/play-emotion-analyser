@@ -36,7 +36,8 @@ export default Radium(React.createClass({
     const currentAct = Reactor.evaluate(PlayModule.getters.currentAct);
 
     return (
-      <div style={ style.container }>
+      <div className='speeches'
+           style={ style.container }>
         <Previous />
         <ProgressIndicator />
         <div style={ [style.innerContainer, computedStyle] }>

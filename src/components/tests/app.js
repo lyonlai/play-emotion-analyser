@@ -38,11 +38,29 @@ describe('Component: App', () => {
       const acts = Reactor.evaluate(PlayModule.getters.acts);
 
       acts.toList().forEach((act, index) => {
-        const scenes = act.get('scenes');
+        const scenes = act.get('scenes').toList();
         app.find('.navigator .acts .act').at(index).simulate('click');
         app.find('.navigator .scenes .scene').length.should.equal(scenes.size);
-      })
+        app.find('.navigator .scenes .scene')
+          .map(el => el.node.innerText)
+          .forEach((txt, index) => txt.should.include(scenes.getIn([index, 'title']), 'should have correct title'))
+      });
     });
+
+    it('clicking on each scene should show right set of speeches', () => {
+      const acts = Reactor.evaluate(PlayModule.getters.acts);
+
+      acts.toList().forEach((act, index) => {
+        const scenes = act.get('scenes').toList();
+        app.find('.navigator .acts .act').at(index).simulate('click');
+        app.find('.navigator .scenes .scene').forEach((sceneEl, index) => {
+          const speeches = scenes.getIn([index, 'speeches']);
+          sceneEl.simulate('click');
+          app.find('.speeches .speech').length.should.equal(speeches.size);
+        });
+      });
+    });
+
   });
 
 });

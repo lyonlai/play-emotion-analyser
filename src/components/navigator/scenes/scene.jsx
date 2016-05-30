@@ -14,14 +14,15 @@ import Reactor from 'reactor';
 export default Radium(React.createClass({
 
   _onClick() {
-    const currentScene = Reactor.evaluate(PlayModule.getters.currentScene);
-    const sceneId = this.props.scene.get('id');
-    if (currentScene != sceneId) {
-      PlayModule.actions.setCurrentScene(sceneId);
-      PlayModule.actions.setCurrentSpeech('1');
-      PlayModule.actions.traceSpeaker('');
-    }
-
+    Reactor.batch(() => {
+      const currentScene = Reactor.evaluate(PlayModule.getters.currentScene);
+      const sceneId = this.props.scene.get('id');
+      if (currentScene != sceneId) {
+        PlayModule.actions.setCurrentScene(sceneId);
+        PlayModule.actions.setCurrentSpeech('1');
+        PlayModule.actions.traceSpeaker('');
+      }  
+    });
   },
 
   render() {
