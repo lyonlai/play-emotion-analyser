@@ -47,7 +47,8 @@ export default Radium(React.createClass({
     const isBeginning = currentSpeech === (tracedPlayer ? firstSpeechForSpeaker : 1);
 
     return (
-      <div style={ [style.navigator.previous, (!this.state.currentSpeech || isBeginning) && style.hide ] }
+      <div className='previous'
+           style={ [style.navigator.previous, (!this.state.currentSpeech || isBeginning) && style.hide ] }
            onClick={this._previousSpeech} >
         <span style={ style.navigator.previousText}>&lt;</span>
       </div>

@@ -50,7 +50,8 @@ export default Radium(React.createClass({
     const isEnd = currentSpeech === (tracedPlayer ? lastSpeechForSpeaker : lastSpeechId);
 
     return (
-      <div style={ [style.navigator.next, (!this.state.currentSpeech || isEnd) && style.hide ]}
+      <div className='next'
+           style={ [style.navigator.next, (!this.state.currentSpeech || isEnd) && style.hide ]}
            onClick={this._nextSpeech}>
         <span style={ style.navigator.nextText}>&gt;</span>
       </div>

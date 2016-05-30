@@ -31,7 +31,7 @@ export default Radium(React.createClass({
 
   render() {
     const currentSpeech = Number(this.state.currentSpeech);
-    const computedStyle = currentSpeech ? { transform: `translateX(${(currentSpeech - 1) * - 600}px)`} : {}
+    const computedStyle = currentSpeech ? { transform: `translateX(${(currentSpeech - 1) * -600}px)`} : {}
     const currentSceneId = Reactor.evaluate(PlayModule.getters.currentScene);
     const currentAct = Reactor.evaluate(PlayModule.getters.currentAct);
 
@@ -40,7 +40,8 @@ export default Radium(React.createClass({
            style={ style.container }>
         <Previous />
         <ProgressIndicator />
-        <div style={ [style.innerContainer, computedStyle] }>
+        <div className='container'
+             style={ [style.innerContainer, computedStyle] }>
           {
             this.state.speeches
               .sortBy(speech => Number(speech.get('id')))

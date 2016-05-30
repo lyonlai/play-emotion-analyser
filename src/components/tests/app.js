@@ -76,6 +76,16 @@ describe('Component: App', () => {
       });
     });
 
+    it('speech navigator should work as expected', () => {
+      app.find('.navigator .acts .act').first().simulate('click');
+      app.find('.navigator .scenes .scene').first().simulate('click');
+      app.find('.speeches .next').simulate('click');
+      app.find('.speeches .container').get(0).style.transform.should.equal('translateX(-600px)');
+      app.find('.speeches .previous').simulate('click');
+      app.find('.speeches .container').get(0).style.transform.should.equal('translateX(0px)');
+
+    });
+
   });
 
 });
