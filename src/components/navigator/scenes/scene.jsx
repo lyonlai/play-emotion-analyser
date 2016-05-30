@@ -21,7 +21,7 @@ export default Radium(React.createClass({
         PlayModule.actions.setCurrentScene(sceneId);
         PlayModule.actions.setCurrentSpeech('1');
         PlayModule.actions.traceSpeaker('');
-      }  
+      }
     });
   },
 
