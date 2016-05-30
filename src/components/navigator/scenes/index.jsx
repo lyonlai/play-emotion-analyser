@@ -23,7 +23,8 @@ export default React.createClass({
 
   render() {
     return (
-      <div style={ style.container }>
+      <div className='scenes'
+           style={ style.container }>
         <Header />
         {
           this.state.scenes.map((scene, id) =>

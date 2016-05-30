@@ -23,8 +23,10 @@ export default Radium(React.createClass({
 
   render() {
     return (
-      <div style={ style.container }>
-        <div style={ [style.innerContainer, this.state.showingAct && style.showAct] }>
+      <div className='navigator'
+           style={ style.container }>
+        <div className='container'
+             style={ [style.innerContainer, this.state.showingAct && style.showAct] }>
           <Acts />
           <Scenes />
         </div>

@@ -30,7 +30,8 @@ export default Radium(React.createClass({
     const isSelected = this.props.isSelected;
 
     return (
-      <div style={ [style.item, isSelected && style.selected] }
+      <div className='scene'
+           style={ [style.item, isSelected && style.selected] }
            onClick={ this._onClick }>
         { `Scene ${numberConverter.convert(id)}: ${title}` }
       </div>

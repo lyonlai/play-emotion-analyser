@@ -21,7 +21,8 @@ export default React.createClass({
 
   render() {
     return (
-      <div style={ style.container }>
+      <div className='acts'
+           style={ style.container }>
         {
           this.state.acts.map((act, id) =>
             <Act act={act} key={id} isSelected={ act.get('id') === this.state.currentAct } />
