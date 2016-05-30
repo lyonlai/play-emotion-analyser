@@ -2,7 +2,7 @@ export default {
   progressIndicator: {
     position: 'absolute',
     width: '600px',
-    height: '30px',
+    height: '40px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

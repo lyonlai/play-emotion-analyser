@@ -75,12 +75,12 @@ export const speakerIndexesForCurrentScene = [
 export const speakersForCurrentScene = [
   speakerIndexesForCurrentScene,
   indexes =>
-    indexes.keySeq().sort().toArray()
+    indexes.keySeq().sort().toList()
 ];
 
 export const tracedSpeakerIndexes = [
   speakerIndexesForCurrentScene,
   tracedSpeaker,
   (indexes, speaker) =>
-    indexes.get(speaker) || I({})
+    indexes.get(speaker).sortBy(index => Number(index)) || I({})
 ];

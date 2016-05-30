@@ -16,6 +16,7 @@ import Previous from './nav/previous';
 import Next from './nav/next';
 
 import ProgressIndicator from './progress-indicator';
+import SpeakerSelect from './speaker-select';
 
 export default Radium(React.createClass({
 
@@ -27,7 +28,6 @@ export default Radium(React.createClass({
       currentSpeech: PlayModule.getters.currentSpeech
     };
   },
-
 
   render() {
     const currentSpeech = Number(this.state.currentSpeech);
@@ -53,6 +53,7 @@ export default Radium(React.createClass({
         </div>
         <Next />
         <Progress />
+        <SpeakerSelect />
       </div>
     );
   }
