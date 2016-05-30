@@ -24,6 +24,7 @@ export default new Store({
     this.on(actionTypes.TRACE_SPEAKER, this._traceSpeaker);
     this.on(actionTypes.SHOW_ACT, this._showAct);
     this.on(actionTypes.HIDE_ACT, this._hideAct);
+    this.on(actionTypes.RESET_UI, this._resetUI);
   },
 
   _loadPlay(state, { play }) {
@@ -52,6 +53,11 @@ export default new Store({
 
   _traceSpeaker(state, { speaker }) {
     return state.setIn(['ui', 'speaker'], speaker);
+  },
+
+  _resetUI(state) {
+    const initialState = this.getInitialState();
+    return state.set('ui', initialState.get('ui'));
   }
 
 });

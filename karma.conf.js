@@ -14,7 +14,10 @@ module.exports = function(config) {
     captureTimeout: 60000,
     frameworks: [ 'mocha', 'chai' ],
     client: {
-      mocha: {}
+      mocha: {
+        reporter: 'html', // change Karma's debug.html to the mocha web reporter
+        ui: 'bdd'
+      }
     },
     singleRun: false,
     reporters: [ 'mocha', 'coverage' ],

@@ -28,3 +28,7 @@ export function showAct() {
 export function hideAct() {
   Reactor.dispatch(actionTypes.HIDE_ACT);
 }
+
+export function resetUI() {
+  Reactor.dispatch(actionTypes.RESET_UI);
+}
