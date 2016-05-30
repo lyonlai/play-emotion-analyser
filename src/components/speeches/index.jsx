@@ -12,6 +12,9 @@ import Radium from 'radium';
 
 import Progress from './progress';
 
+import Previous from './nav/previous';
+import Next from './nav/next';
+
 export default Radium(React.createClass({
 
   mixins: [Reactor.ReactMixin],
@@ -23,23 +26,6 @@ export default Radium(React.createClass({
     };
   },
 
-  _previousSpeech() {
-    const currentSpeech = Number(this.state.currentSpeech);
-
-    if (currentSpeech > 1) {
-      PlayModule.actions.setCurrentSpeech(`${currentSpeech - 1}`);
-    }
-
-  },
-
-  _nextSpeech() {
-    const currentSpeech = Number(this.state.currentSpeech);
-    const lastSpeechId = Reactor.evaluate(PlayModule.getters.lastSpeechIdForCurrentScene);
-
-    if (currentSpeech < lastSpeechId) {
-      PlayModule.actions.setCurrentSpeech(`${currentSpeech + 1}`);
-    }
-  },
 
   render() {
     const currentSpeech = Number(this.state.currentSpeech);
@@ -47,15 +33,10 @@ export default Radium(React.createClass({
     const lastSpeechId = Reactor.evaluate(PlayModule.getters.lastSpeechIdForCurrentScene);
     const currentSceneId = Reactor.evaluate(PlayModule.getters.currentScene);
     const currentAct = Reactor.evaluate(PlayModule.getters.currentAct);
-    const isBeginning = currentSpeech === 1;
-    const isEnd = currentSpeech === Number(lastSpeechId);
 
     return (
       <div style={ style.container }>
-        <div style={ [style.navigator.previous, (!currentSpeech || isBeginning) && style.hide ] }
-             onClick={this._previousSpeech} >
-          <span style={ style.navigator.previousText}>&lt;</span>
-        </div>
+        <Previous />
         <div style={ [style.progressIndicator, !currentSpeech && style.hide]} >
          {currentSpeech} / {lastSpeechId}
         </div>
@@ -73,10 +54,7 @@ export default Radium(React.createClass({
           }
 
         </div>
-        <div style={ [style.navigator.next, (!currentSpeech || isEnd) && style.hide ]}
-             onClick={this._nextSpeech}>
-          <span style={ style.navigator.nextText}>&gt;</span>
-        </div>
+        <Next />
         <Progress />
       </div>
     );

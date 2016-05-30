@@ -17,6 +17,10 @@ export function setCurrentSpeech(speechId) {
   Reactor.dispatch(actionTypes.SET_CURRENT_SPEECH, { speechId });
 }
 
+export function traceSpeaker(speaker) {
+  Reactor.dispatch(actionTypes.TRACE_SPEAKER, { speaker });
+}
+
 export function showAct() {
   Reactor.dispatch(actionTypes.SHOW_ACT);
 }
