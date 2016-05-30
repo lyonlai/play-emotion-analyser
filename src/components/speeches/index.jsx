@@ -45,6 +45,8 @@ export default Radium(React.createClass({
     const currentSpeech = Number(this.state.currentSpeech);
     const computedStyle = currentSpeech ? { transform: `translateX(${(currentSpeech - 1) * -500}px)`} : {}
     const lastSpeechId = Reactor.evaluate(PlayModule.getters.lastSpeechIdForCurrentScene);
+    const currentSceneId = Reactor.evaluate(PlayModule.getters.currentScene);
+    const currentAct = Reactor.evaluate(PlayModule.getters.currentAct);
     const isBeginning = currentSpeech === 1;
     const isEnd = currentSpeech === Number(lastSpeechId);
 
@@ -60,9 +62,14 @@ export default Radium(React.createClass({
         <div style={ [style.innerContainer, computedStyle] }>
 
           {
-            this.state.speeches.map(speech =>
-              <Speech speech={speech} key={speech.get('id')} />
-            ).toList()
+            this.state.speeches
+              .sortBy(speech => Number(speech.get('id')))
+              .map(speech =>
+                <Speech speech={speech}
+                        act={currentAct}
+                        scene={currentSceneId}
+                        key={`${currentAct}.${currentSceneId}.${speech.get('id')}`} />
+              ).toList()
           }
 
         </div>

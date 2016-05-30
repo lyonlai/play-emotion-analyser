@@ -47,7 +47,7 @@ export default React.createClass({
       }],
       chart: {
         type: 'column'
-      },
+      }
     };
 
     const detectedEmotions = [];

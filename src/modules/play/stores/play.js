@@ -29,23 +29,23 @@ export default new Store({
   },
 
   _setCurrentAct(state, { actId }) {
-    return state.setIn(['ui', 'act'], actId);;
+    return state.setIn(['ui', 'act'], actId);
   },
 
   _setCurrentScene(state, { sceneId }) {
-    return state.setIn(['ui', 'scene'], sceneId);;
+    return state.setIn(['ui', 'scene'], sceneId);
   },
 
   _showAct(state) {
-    return state.setIn(['ui', 'showingAct'], true);;
+    return state.setIn(['ui', 'showingAct'], true);
   },
 
   _hideAct(state) {
-    return state.setIn(['ui', 'showingAct'], false);;
+    return state.setIn(['ui', 'showingAct'], false);
   },
 
   _setCurrentSpeech(state, { speechId }) {
-    return state.setIn(['ui', 'speech'], speechId);;
+    return state.setIn(['ui', 'speech'], speechId);
   }
 
 });

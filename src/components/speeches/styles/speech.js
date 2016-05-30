@@ -5,7 +5,7 @@ export default {
   },
   speech: {
     fontSize: '14px',
-    lineHeight: '18px',
+    lineHeight: '18px'
   },
   speaker: {
     fontWeight: 'bold',

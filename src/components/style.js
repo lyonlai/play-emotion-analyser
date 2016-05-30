@@ -6,6 +6,6 @@ export default {
   },
   innerContainer: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'row'
   }
 }
